@@ -1,7 +1,7 @@
 import styled from 'styled-components';
-import Head from 'next/head';
 import { Wrapper } from '../components/Wrapper';
 import { Logo } from '../components/Logo';
+import Menu from '../components/Menu/index';
 import { useState, useEffect } from 'react';
 
 const Heading = styled.h1`
@@ -38,6 +38,7 @@ export default function Home() {
           I’m a web developer and multimedia designer. Pick an area of interest
           down below to view what I’ve worked on.
         </p>
+        <Menu></Menu>
       </Wrapper>
     </>
   );
