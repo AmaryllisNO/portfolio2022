@@ -31,6 +31,11 @@ const GlobalStyles = createGlobalStyle`
     color: #D0D0D0;
   }
 
+  a {
+    color: white;
+    text-decoration: none;
+  }
+
 `;
 
 const theme = {

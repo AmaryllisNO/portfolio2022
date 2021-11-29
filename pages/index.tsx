@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { Wrapper } from '../components/Wrapper';
 import { Logo } from '../components/Logo';
-import Menu from '../components/Menu/index';
+import Menu from '../components/Menu';
 import { useState, useEffect } from 'react';
 
 const Heading = styled.h1`
