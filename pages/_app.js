@@ -9,6 +9,8 @@ const GlobalStyles = createGlobalStyle`
 
   * {
     box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
     margin: 0;
       padding: 0;
   }
@@ -23,12 +25,13 @@ const GlobalStyles = createGlobalStyle`
 
   h1 {
     font-style: italic;
-   
+    margin: 10px 0 10px 0;
   }
 
   p {
-    font-size: 15px;
+    font-size: 14px;
     color: #D0D0D0;
+    margin: 10px 0 10px 0;
   }
 
   a {

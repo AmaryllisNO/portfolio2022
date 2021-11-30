@@ -2,15 +2,8 @@ import styled from 'styled-components';
 import { Wrapper } from '../components/Wrapper';
 import { Logo } from '../components/Logo';
 import Menu from '../components/Menu';
+import { Heading1 } from '../components/Heading';
 import { useState, useEffect } from 'react';
-
-const Heading = styled.h1`
-  font-size: 24px;
-  font-family: 'Atlas Grotesk';
-  font-weight: bold;
-  text-transform: uppercase;
-  color: ${({ theme }) => theme.colors.primary};
-`;
 
 export default function Home() {
   const [isEnglish, setIsEnglish] = useState(false);
@@ -33,7 +26,7 @@ export default function Home() {
     <>
       <Wrapper>
         <Logo src='images/svg/amaryllis-text-logo-2022.svg' />
-        <Heading>{isEnglish ? "Hi, I'm Amaryllis." : 'Hei'}</Heading>
+        <Heading1>{isEnglish ? "Hi, I'm Amaryllis." : 'Hei'}</Heading1>
         <p>
           I’m a web developer and multimedia designer. Pick an area of interest
           down below to view what I’ve worked on.
