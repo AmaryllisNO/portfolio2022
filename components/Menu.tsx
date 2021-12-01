@@ -69,7 +69,11 @@ const Menu = () => {
       <MenuList>
         <li>
           <Link href='/dev'>
-            <MenuLink>
+            <MenuLink
+              onMouseEnter={() => {
+                console.log('hovered');
+              }}
+            >
               <ImgContainer>
                 {' '}
                 <img src='./images/svg/dev.svg' alt='' />

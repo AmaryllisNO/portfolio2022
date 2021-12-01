@@ -1,5 +1,7 @@
 import { createGlobalStyle, ThemeProvider } from 'styled-components';
 import Head from 'next/head';
+import Navbar from '../components/Navbar';
+import Sidebar from '../components/Sidebar';
 
 const GlobalStyles = createGlobalStyle`
  @font-face {
@@ -39,6 +41,39 @@ const GlobalStyles = createGlobalStyle`
     text-decoration: none;
   }
 
+  button {
+    display: inline-block;
+    border: none;
+    
+    margin: 0;
+    text-decoration: none;
+    background: none;
+    font-family: sans-serif;
+    font-size: 1rem;
+    cursor: pointer;
+    text-align: center;
+    transition: background 250ms ease-in-out, 
+                transform 150ms ease;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+
+
+button:focus {
+    outline: none;
+    outline-offset: -4px;
+}
+
+button:focus-visible {
+    outline: none;
+    outline-offset: -4px;
+}
+
+button:active {
+    transform: none;
+}
+
 `;
 
 const theme = {
@@ -46,6 +81,11 @@ const theme = {
     primary: '#FF3061',
     background: '#1A1E22',
     onBackground: '#2A3036',
+    offWhite: '#C6C6C6',
+  },
+
+  measurements: {
+    sidebar: '200px',
   },
 };
 
@@ -62,6 +102,8 @@ function MyApp({ Component, pageProps }) {
       </Head>
       <GlobalStyles />
       <ThemeProvider theme={theme}>
+        <Navbar />
+        <Sidebar />
         <Component {...pageProps} />
       </ThemeProvider>
     </>
