@@ -37,11 +37,23 @@ export const StyledSidebar = styled.aside`
   z-index: 1000;
   min-height: 100%;
   min-width: ${({ theme }) => theme.measurements.sidebar};
-  max-width: 0;
+
   background-color: ${({ theme }) => theme.colors.onBackground};
   box-shadow: 10px 40px 40px 10px #000000;
 
-  transition: 0.5s;
+  animation: slideInLeft 0.5s;
+
+  @keyframes slideInLeft {
+    0% {
+      opacity: 0;
+      max-width: 0;
+    }
+
+    100% {
+      opacity: 100%;
+      width: ${({ theme }) => theme.measurements.sidebar};
+    }
+  }
 `;
 
 export const SidebarContent = styled.div`
@@ -58,7 +70,7 @@ export const CloseButton = styled.button`
   justify-content: center;
   align-items: center;
   margin-right: 1rem;
-  margin-bottom: 5px;
+  margin-bottom: 8px;
   font-family: 'lato', sans-serif;
   font-size: 14px;
 

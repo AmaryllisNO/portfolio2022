@@ -18,7 +18,6 @@ const Navbar = () => {
     function CloseNav() {
       setIsOpen(!isOpen);
       console.log('closing nav');
-      console.log('it is open:' + isOpen);
     }
 
     return (
@@ -39,7 +38,7 @@ const Navbar = () => {
   };
   function OpenNav() {
     setIsOpen(!isOpen);
-    console.log(isOpen);
+    console.log('opening nav');
   }
 
   return (
