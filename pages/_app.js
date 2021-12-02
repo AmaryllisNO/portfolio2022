@@ -1,7 +1,6 @@
 import { createGlobalStyle, ThemeProvider } from 'styled-components';
 import Head from 'next/head';
-import Navbar from '../components/Navbar';
-import Sidebar from '../components/Sidebar';
+import Navbar from '../components/Nav';
 
 const GlobalStyles = createGlobalStyle`
  @font-face {
@@ -23,6 +22,7 @@ const GlobalStyles = createGlobalStyle`
       padding: 0;
       color: white;
       font-family: 'Lato';
+      min-height: 100%;
     }
 
   h1 {
@@ -85,7 +85,7 @@ const theme = {
   },
 
   measurements: {
-    sidebar: '200px',
+    sidebar: '250px',
   },
 };
 
@@ -103,7 +103,6 @@ function MyApp({ Component, pageProps }) {
       <GlobalStyles />
       <ThemeProvider theme={theme}>
         <Navbar />
-        <Sidebar />
         <Component {...pageProps} />
       </ThemeProvider>
     </>
