@@ -132,6 +132,9 @@ export const Nav = styled.nav`
 export const Navlink = styled.span`
   display: inline-block;
   padding-right: 13px;
+  font-size: 1.4rem;
+  font-weight: 500;
+  cursor: pointer;
 
   color: ${({ href, pathname, theme }) =>
     href === pathname ? theme.colors.primary : 'white'};

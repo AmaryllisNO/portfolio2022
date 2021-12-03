@@ -14,8 +14,6 @@ const Sidebar = ({ open }) => {
   const router = useRouter();
 
   // const [pathname, setPathname] = useState(router.pathname);
-  console.log(router.pathname);
-  console.log(router);
 
   return (
     <>
@@ -37,8 +35,16 @@ const Sidebar = ({ open }) => {
                   <li></li>
                   <li></li>
                 </ul>
-                <li>ABOUT</li>
-                <li>CONTACT</li>
+                <li>
+                  <Link href='/about' passHref>
+                    <Navlink pathname={router.pathname}>ABOUT</Navlink>
+                  </Link>
+                </li>
+                <li>
+                  <Link href='/contact' passHref>
+                    <Navlink pathname={router.pathname}>CONTACT</Navlink>
+                  </Link>
+                </li>
               </ul>
             </Nav>
           </SidebarContent>
