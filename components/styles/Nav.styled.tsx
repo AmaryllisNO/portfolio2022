@@ -62,6 +62,7 @@ export const StyledSidebar = styled.aside`
   div {
     align-self: center;
     width: 100%;
+    overflow: hidden;
   }
 `;
 
@@ -69,6 +70,12 @@ export const SidebarContent = styled.div`
   min-height: 100%;
   min-width: 100%;
   justify-content: flex-end;
+
+  ul {
+    li {
+      margin-bottom: 2rem;
+    }
+  }
 `;
 
 export const CloseButton = styled.button`
@@ -146,4 +153,31 @@ export const Navline = styled.span`
   height: 1px;
   width: 100%;
   background-color: ${({ theme }) => theme.colors.primary};
+`;
+
+export const PortfolioList = styled.ul`
+  display: flex;
+  flex: row;
+  align-items: baseline;
+  justify-content: center;
+`;
+
+export const PortfolioLink = styled.span`
+  cursor: pointer;
+  margin-right: 1.5rem;
+  color: ${({ href, pathname, theme }) =>
+    href === pathname ? theme.colors.primary : 'white'};
+
+    filter: brightness(110%);
+
+
+  }
+
+  img {
+    min-width: 20px;
+filter: ${({ href, pathname }) =>
+  href === pathname
+    ? 'invert(30%) sepia(86%) saturate(6000%) hue-rotate(328deg) brightness(101%) contrast(101%);'
+    : ''};
+   
 `;

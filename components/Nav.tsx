@@ -26,7 +26,7 @@ const Navbar = () => {
   return (
     <>
       <Sidebar open={isOpen} />
-      <NavBackground open={isOpen} />
+      <NavBackground open={isOpen} onClick={() => CloseNav()} />
       <StyledNavbar>
         <Wrapper>
           <NavbarContent>
