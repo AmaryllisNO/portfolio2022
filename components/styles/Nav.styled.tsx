@@ -39,23 +39,19 @@ export const NavButton = styled.button`
 // sidebar styling
 export const StyledSidebar = styled.aside`
   transition: 0.5s;
-
-  animation: slideInLeft 0.5s;
-
-  overflow: hidden;
+  overflow: visible;
   position: fixed;
   top: 0;
   right: 0;
-  z-index: 99;
+  z-index: 2;
   min-height: 100%;
-  min-width: ${({ open }) => (open ? '250px' : '0')};
-  max-width: ${({ open }) => (open ? '250px' : '0')};
+  width: ${({ open }) => (open ? '250px' : '0')};
 
   background-color: ${({ theme }) => theme.colors.onBackground};
-  box-shadow: ${({ open }) =>
+  /* box-shadow: ${({ open }) =>
     !open
       ? `10px 40px 40px 10px rgba(0, 0, 0, 0);`
-      : '10px 40px 40px 10px rgba(0, 0, 0, 1);'};
+      : '10px 40px 40px 10px rgba(0, 0, 0, 1);'}; */
 `;
 
 export const SidebarContent = styled.div`
@@ -78,4 +74,29 @@ export const CloseButton = styled.button`
   z-index: 100;
 
   color: ${({ theme }) => theme.colors.offWhite};
+`;
+
+export const NavBackground = styled.div`
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(13, 17, 24, 0.603);
+  transition: 0.5s;
+  opacity: ${({ open }) => (open ? '100%' : '0%')};
+  visibility: ${({ open }) => (open ? 'visible' : 'hidden')};
+  animation: ${({ open }) => (open ? 'fade 0.5s' : 'fade 0.5s reverse')};
+
+  @keyframes fade {
+    from {
+      visibility: 'hidden';
+      opacity: 0%;
+    }
+    to {
+      opacity: 100%;
+      visibility: visible;
+    }
+  }
 `;

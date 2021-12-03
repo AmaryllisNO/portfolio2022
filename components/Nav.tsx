@@ -3,6 +3,7 @@ import {
   NavbarContent,
   NavButton,
   CloseButton,
+  NavBackground,
 } from './styles/Nav.styled';
 import Link from 'next/link';
 
@@ -26,6 +27,7 @@ const Navbar = () => {
   return (
     <>
       <Sidebar open={isOpen} />
+      <NavBackground open={isOpen} />
       <StyledNavbar>
         <Wrapper>
           <NavbarContent>
