@@ -38,36 +38,24 @@ export const NavButton = styled.button`
 
 // sidebar styling
 export const StyledSidebar = styled.aside`
-  transition: ${({ open }) => (open ? `0.5s` : '0.5s')};
-  animation: ${({ open }) => (open ? `slideInLeft 0.5s` : 'slideInLeft 0.5s')};
-  // display: none;
+  transition: 0.5s;
+
+  animation: slideInLeft 0.5s;
+
   overflow: hidden;
   position: fixed;
   top: 0;
   right: 0;
   z-index: 99;
   min-height: 100%;
-  // width: 200px;
-  max-width: ${({ open }) => (open ? `200px` : '')};
-  min-width: ${({ open }) => (open ? `200px` : '')};
+  min-width: ${({ open }) => (open ? '250px' : '0')};
+  max-width: ${({ open }) => (open ? '250px' : '0')};
 
   background-color: ${({ theme }) => theme.colors.onBackground};
   box-shadow: ${({ open }) =>
     !open
       ? `10px 40px 40px 10px rgba(0, 0, 0, 0);`
       : '10px 40px 40px 10px rgba(0, 0, 0, 1);'};
-
-  @keyframes slideInLeft {
-    0% {
-      opacity: 0;
-      max-width: 0;
-    }
-
-    100% {
-      opacity: 100%;
-      width: ${({ theme }) => theme.measurements.sidebar};
-    }
-  }
 `;
 
 export const SidebarContent = styled.div`
