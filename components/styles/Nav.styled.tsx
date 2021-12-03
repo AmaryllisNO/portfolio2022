@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 // navbar styling
-export const StyledNavbar = styled.nav`
+export const StyledNavbar = styled.div`
   width: 100%;
   height: 2.5rem;
   position: absolute;
@@ -38,8 +38,13 @@ export const NavButton = styled.button`
 
 // sidebar styling
 export const StyledSidebar = styled.aside`
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  vertical-align: middle;
+  align-items: middle;
   transition: 0.5s;
-  overflow: visible;
+  overflow: hidden;
   position: fixed;
   top: 0;
   right: 0;
@@ -52,6 +57,12 @@ export const StyledSidebar = styled.aside`
     !open
       ? `10px 40px 40px 10px rgba(0, 0, 0, 0);`
       : '10px 40px 40px 10px rgba(0, 0, 0, 1);'}; */
+
+  // sidebar wrapper
+  div {
+    align-self: center;
+    width: 100%;
+  }
 `;
 
 export const SidebarContent = styled.div`
@@ -99,4 +110,37 @@ export const NavBackground = styled.div`
       visibility: visible;
     }
   }
+`;
+
+export const Nav = styled.nav`
+  ul {
+    font-family: 'Atlas Grotesk', sans-serif;
+    font-weight: 400;
+    list-style-type: none;
+  }
+
+  li {
+    display: flex;
+    align-items: center;
+  }
+
+  span {
+    display: inline-block;
+  }
+`;
+
+export const Navlink = styled.span`
+  display: inline-block;
+  padding-right: 13px;
+
+  color: ${({ href, pathname, theme }) =>
+    href === pathname ? theme.colors.primary : 'white'};
+`;
+
+export const Navline = styled.span`
+  content: '';
+  display: inline-block;
+  height: 1px;
+  width: 100%;
+  background-color: ${({ theme }) => theme.colors.primary};
 `;

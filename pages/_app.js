@@ -31,7 +31,7 @@ const GlobalStyles = createGlobalStyle`
   }
 
   p {
-    font-size: 14px;
+    font-size: 1rem;
     color: #D0D0D0;
     margin: 10px 0 10px 0;
   }

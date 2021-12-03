@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Heading1 = styled.h1`
-  font-size: 24px;
+  font-size: 2rem;
   font-family: 'Atlas Grotesk';
   font-weight: bold;
   text-transform: uppercase;

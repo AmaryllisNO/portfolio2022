@@ -13,7 +13,6 @@ import React, { useState } from 'react';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  console.log(isOpen);
 
   function OpenNav() {
     setIsOpen(!isOpen);
