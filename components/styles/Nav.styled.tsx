@@ -145,6 +145,10 @@ export const Navlink = styled.span`
 
   color: ${({ href, pathname, theme }) =>
     href === pathname ? theme.colors.primary : 'white'};
+
+  &:hover {
+    color: ${({ theme }) => theme.colors.offWhite};
+  }
 `;
 
 export const Navline = styled.span`

@@ -15,29 +15,6 @@ import { Wrapper } from './Wrapper';
 const Sidebar = ({ open }) => {
   const router = useRouter();
 
-  let portfoliolinks = [
-    {
-      pathname: '/dev',
-    },
-    {
-      pathname: '/design',
-    },
-    {
-      pathname: '/art',
-    },
-    {
-      pathname: '/music',
-    },
-  ];
-
-  console.log(portfoliolinks[0].pathname);
-
-  portfoliolinks.forEach((link) => {
-    console.log(link.pathname);
-  });
-
-  // const [pathname, setPathname] = useState(router.pathname);
-
   return (
     <>
       <StyledSidebar open={open}>
