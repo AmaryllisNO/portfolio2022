@@ -13,12 +13,11 @@ import React, { useState, useEffect } from 'react';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-
   const size = useWindowSize();
 
   useEffect(() => {
     if (size[0] >= 768) {
-      setIsOpen(false);
+      CloseNav();
     }
   }, [size]);
 
