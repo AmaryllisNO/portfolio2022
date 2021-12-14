@@ -12,6 +12,7 @@ export const MenuLink = styled.a`
   cursor: pointer;
   border-bottom: 1px solid ${({ theme }) => theme.colors.primary};
   padding: 15px 10px 15px 10px;
+  margin-bottom: 5px;
 
   transition: 0.5s;
   max-width: 80%;
@@ -40,18 +41,6 @@ export const MenuLink = styled.a`
     }
 
     clip-path: polygon(100% 0, 100% 50%, 90% 100%, 0% 100%, 0% 75%, 0 0);
-
-    /*   &::before {
-      content: '';
-      width: 24px;
-      height: 24px;
-      position: absolute;
-      bottom: -10px;
-      left: -10px;
-      background-color: yellow;
-      border-top: 2px solid var(--black-color);
-      transform: rotate(45deg);
-    } */
   }
 `;
 

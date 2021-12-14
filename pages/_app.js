@@ -89,6 +89,10 @@ const theme = {
   measurements: {
     sidebar: '250px',
   },
+
+  breakpoints: {
+    mobile: '768px',
+  },
 };
 
 function MyApp({ Component, pageProps }) {

@@ -13,12 +13,18 @@ const LogoContainer = styled.div`
 
 const LandingContainer = styled.div`
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
+  max-width: 50%;
+
+  @media only screen and (max-width: 768px) {
+    max-width: 100%;
+  }
 `;
 
-const LandingLeft = styled.div``;
-
-const LandingRight = styled.div``;
+const LandingParagraph = styled.div`
+  max-width: 400px;
+`;
 
 export default function Home() {
   const [isEnglish, setIsEnglish] = useState(false);
@@ -45,15 +51,12 @@ export default function Home() {
         </LogoContainer>
 
         <LandingContainer>
-          <LandingLeft>
-            <Heading1>{isEnglish ? "Hi, I'm Amaryllis." : 'Hei'}</Heading1>
-            <p>
-              I’m a web developer and multimedia designer. Pick an area of
-              interest down below to view what I’ve worked on.
-            </p>{' '}
-            <Menu />
-          </LandingLeft>
-          <LandingRight></LandingRight>
+          <Heading1>{isEnglish ? "Hi, I'm Amaryllis." : 'Hei'}</Heading1>
+          <LandingParagraph>
+            I’m a web developer and multimedia designer. Pick an area of
+            interest down below to view what I’ve worked on.
+          </LandingParagraph>{' '}
+          <Menu />
         </LandingContainer>
       </Wrapper>
     </>

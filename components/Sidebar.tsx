@@ -2,14 +2,14 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import {
-  StyledSidebar,
-  SidebarContent,
   Nav,
   Navline,
   Navlink,
   PortfolioList,
   PortfolioLink,
 } from './styles/Nav.styled';
+
+import { StyledSidebar, SidebarContent } from './styles/Sidebar.styled';
 import { Wrapper } from './Wrapper';
 
 const Sidebar = ({ open }) => {
@@ -32,28 +32,31 @@ const Sidebar = ({ open }) => {
                   <li>
                     <Link href='/dev' passHref>
                       <PortfolioLink pathname={router.pathname}>
-                        <img src='/images/svg/dev.svg' alt='dev' />
+                        <img src='/images/svg/dev.svg' alt='web development' />
                       </PortfolioLink>
                     </Link>
                   </li>
                   <li>
                     <Link href='/design' passHref>
                       <PortfolioLink>
-                        <img src='/images/svg/design.svg' alt='dev' />
+                        <img src='/images/svg/design.svg' alt='design' />
                       </PortfolioLink>
                     </Link>
                   </li>
                   <li>
                     <Link href='/art' passHref>
                       <PortfolioLink>
-                        <img src='/images/svg/art.svg' alt='dev' />
+                        <img src='/images/svg/art.svg' alt='artwork' />
                       </PortfolioLink>
                     </Link>
                   </li>
                   <li>
                     <Link href='/music' passHref>
                       <PortfolioLink>
-                        <img src='/images/svg/music.svg' alt='dev' />
+                        <img
+                          src='/images/svg/music.svg'
+                          alt='music production'
+                        />
                       </PortfolioLink>
                     </Link>
                   </li>
